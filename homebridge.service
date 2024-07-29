@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-#RemainAfterExit=true
+RemainAfterExit=true
 ExecStart=/mnt/raid/dev/homebridge/homebridge-start.sh
 ExecStop=/mnt/raid/dev/homebridge/homebridge-stop.sh
 
