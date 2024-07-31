@@ -1,14 +1,15 @@
 [Unit]
 Description=Homebridge
-After=network-online.target
-Wants=network-online.target
+Wants=default.target
+After=default.target
 
 [Service]
-Type=simple
-RemainAfterExit=true
-User=james
 ExecStart=/usr/bin/bash /mnt/raid/dev/homebridge/homebridge-start.sh
 ExecStop=/usr/bin/bash /mnt/raid/dev/homebridge/homebridge-stop.sh
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=30
+User=james
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
