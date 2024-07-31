@@ -6,8 +6,9 @@ Wants=network-online.target
 [Service]
 Type=simple
 RemainAfterExit=true
-ExecStart=/mnt/raid/dev/homebridge/homebridge-start.sh
-ExecStop=/mnt/raid/dev/homebridge/homebridge-stop.sh
+User=james
+ExecStart=/usr/bin/bash /mnt/raid/dev/homebridge/homebridge-start.sh
+ExecStop=/usr/bin/bash /mnt/raid/dev/homebridge/homebridge-stop.sh
 
 [Install]
 WantedBy=multi-user.target
