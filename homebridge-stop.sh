@@ -1,5 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
-source /mnt/raid/dev/py12-venv/bin/activate
 cd /mnt/raid/dev/homebridge/
-podman-compose down
+/usr/bin/python3.12 -m podman_compose down
